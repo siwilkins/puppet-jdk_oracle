@@ -217,7 +217,7 @@ class jdk_oracle(
           require => Exec['extract_jdk'],
         }
       }
-      Debian, Ubuntu:  {
+      "Debian":  {
         #Accommodate variations in default install locations for some variants of Debian  
         $path_to_updatealternatives_tool = $::lsbdistdescription ? {
           /Ubuntu 14\.04.*/ => '/usr/bin/update-alternatives',
